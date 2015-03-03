@@ -1,0 +1,153 @@
+% slide
+\newcommand{\mySlide}[2]{
+\begin{frame}
+\frametitle{#1}
+#2
+\end{frame}
+}
+
+% text in box
+\newcommand\myBox[2]{
+\begin{beamerboxesrounded}[shadow=true]{#1}
+#2
+\end{beamerboxesrounded}
+\mySkip
+}
+
+% Insert picture to text. 
+\newcommand\myPic[2]{
+\begin{center}
+\includegraphics[scale=#1]{#2}
+\end{center}
+}
+
+% Insert picture to text. 
+\newcommand\myFramepic[2]{
+\begin{center}
+\framebox{\includegraphics[scale=#1]{#2}}
+\end{center}
+}
+
+\newcommand\myList[1]{
+\begin{itemize}
+#1
+\end{itemize}
+}
+
+\newcommand\myListn[1]{
+\begin{enumerate}
+#1
+\end{enumerate}
+}
+
+% space
+\newcommand\mySkip{\par\bigskip}
+
+% Comment
+\newcommand\myComment[1]{}
+
+% Text in two columns
+\newcommand\myColumns[2]{
+\begin{columns}[c]
+\column{2in}
+#1
+\column{2in}
+#2
+\end{columns}
+}
+
+% List in box
+\newcommand\myBoxList[2]{
+\myBox{#1}{
+\myList{
+#2
+}
+}
+}
+
+% Enumerated list in box
+\newcommand\myBoxListn[2]{
+\myBox{#1}{
+\myListn{
+#2
+}
+}
+}
+
+
+% List divided into n columns inside of box
+\newcommand\myColumnBoxList[3]{
+	\myBox{#1}{
+		\begin{multicols}{#2}
+			\myList{
+				#3
+			}
+		\end{multicols}
+	}
+}
+
+% List in box with one point
+\newcommand\myItemBox[2]{
+\myBoxList{#1}{
+\item #2
+}
+}
+
+% centered text
+\newcommand\myC[1]{
+\begin{center}
+#1
+\end{center}
+}
+
+\newcommand\myRef[1]{
+\href{#1}{#1}
+}
+
+%mindmap
+\newcommand\myMM[4][60]{
+\begin{center}
+\begin{tikzpicture}[mindmap, grow cyclic, every node/.style={concept,scale=0.41,circular drop shadow}, concept color=black!40, 
+	level 1/.append style={sibling angle=#1, level distance = 3.8cm},
+	level 2/.append style={sibling angle=45, level distance = 2.5cm},
+	level 3/.append style={sibling angle=45,  level distance = 1.6cm},
+	scale=#3,
+	]
+\node{#2}
+#4
+;
+\end{tikzpicture}
+\end{center}
+}
+
+% new section without number
+\newcommand{\mySection}[1]{
+\section{#1}
+\mySlide{}{
+\begin{center}
+{\Large \bfseries #1}
+\end{center}
+}
+}
+
+% new lection
+\newcounter{numlec}
+\newcommand{\myLec}[1]{
+\addtocounter{numlec}{1}
+\section{#1}
+\mySlide{}{
+\begin{center}
+{\Large Лекция \arabic{numlec}. \par\smallskip {\bfseries #1}}
+\end{center}
+}
+}
+
+%%%%%%%%%%%%%%%%%%%%%
+% last slides
+\newcommand{\myLastSlide}[1]{
+\mySlide{}{
+\begin{center}
+{\LARGE #1}
+\end{center}
+}
+}

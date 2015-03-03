@@ -1,0 +1,43 @@
+\documentclass[mathserif,blue,handout]{beamer} 
+
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage[russian]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{array}
+\usepackage{epstopdf}
+\usepackage{listings}
+\usepackage{amsmath}
+\usepackage{pdfpages}
+% mindmaps
+\usepackage{expl3}
+\usepackage{tikz}
+\usetikzlibrary{mindmap,trees,shadows, calendar,backgrounds}
+% links
+\usepackage{xcolor}
+\usepackage{hyperref}
+\definecolor{linkcolor}{HTML}{483D8B}
+\definecolor{urlcolor}{HTML}{483D8B}
+\hypersetup{pdfstartview=FitH,  linkcolor=linkcolor,urlcolor=urlcolor, colorlinks=true}
+
+\usetheme{Boadilla}
+
+\setbeamertemplate{items}[ball] 
+\setbeamertemplate{blocks}[rounded]
+\setbeamertemplate{headline}[default]
+
+\hyphenpenalty=10000
+\sloppy
+
+\renewcommand{\footnotesize}{\scriptsize}
+
+\title[]{}
+\author[]{}
+\institute[]{}
+\date{}
+
+\input{commands}
+\begin{document}
+\maketitle
+\input{content}
+\end{document}

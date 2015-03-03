@@ -1,0 +1,9 @@
+syntax: glob
+
+*.aux
+*.log
+*.nav
+*.out
+main.pdf
+*.snm
+*.toc
