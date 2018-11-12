@@ -4,3 +4,4 @@
 ** DONE Add version
 ** DONE Add makefile
 * later 
+** TODO Makefile: use separate goal to clear folder
