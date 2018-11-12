@@ -1,6 +1,6 @@
 * 0.1.0
 ** DONE Add todo list
 ** DONE Change structure of folder
-** TODO Add version
-** TODO Add makefile
+** DONE Add version
+** DONE Add makefile
 * later 
